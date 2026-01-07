@@ -1,13 +1,13 @@
-
-
 jogos = [{"nome": "", "genero": "", "ano": 0, "nota": 0.0} for _ in range(100)]
 
 n = 100
-
+qtd = 0 # Quantidade de jogos registrados
 
 def registrar():
     print("")
     print("")
+
+    global qtd
 
     print("Registro de jogos: Apenas aperte enter em Nome do jogo para terminar.")
     print("")
@@ -32,7 +32,20 @@ def registrar():
         jogos[i]["nota"] = nota
 
         print(f"Jogo {i + 1} registrado com sucesso!")
+        qtd = qtd + 1
 
+def listar():
+    print("")
+    print("Lista de jogos registrados:")
+    print("")
+
+    for i in range(qtd):
+        print("Jogo", i + 1, ":")
+        print("Nome:", jogos[i]['nome'])
+        print("Gênero:", jogos[i]['genero'])
+        print("Ano:", jogos[i]['ano'])
+        print("Nota:", jogos[i]['nota'])
+        print("")
 
 def menu():    
     print("")
@@ -51,8 +64,9 @@ def menu():
 
     match função:
         case "1":
-            registrar()    
+            registrar()  
+        case "3":
+            listar()  
 
 # Execução do programa
 menu()
-
