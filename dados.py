@@ -26,20 +26,6 @@ def registrar():
         nota = input("Nota do jogo: ")
         print("")
 
-
-        # Eu não sei o que isso faz
-        """
-        try:
-            ano = int(ano)
-        except ValueError:
-            ano = 0
-
-        try:
-            nota = float(nota)
-        except ValueError:
-            nota = 0.0
-        """
-
         jogos[i]["nome"] = nome
         jogos[i]["genero"] = genero
         jogos[i]["ano"] = ano
@@ -69,3 +55,4 @@ def menu():
 
 # Execução do programa
 menu()
+
