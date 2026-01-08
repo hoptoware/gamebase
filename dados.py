@@ -34,6 +34,23 @@ def registrar():
         print(f"Jogo {i + 1} registrado com sucesso!")
         qtd = qtd + 1
 
+def excluir():
+    print("")
+    print("")
+
+    for i in range(qtd):
+        print("Jogo", i + 1, ":")
+        print(jogos[i]["nome"])
+        print("")
+
+    deletar: str = input("Digite o número do jogo que deseja deletar: ")
+
+    a = deletar
+
+    match deletar:
+        case a:
+            jogos.remove[a]
+
 def listar():
     print("")
     print("Lista de jogos registrados:")
@@ -70,3 +87,4 @@ def menu():
 
 # Execução do programa
 menu()
+
